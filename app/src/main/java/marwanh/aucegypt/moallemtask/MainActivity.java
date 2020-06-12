@@ -1,0 +1,54 @@
+package marwanh.aucegypt.moallemtask;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.graphics.Rect;
+import android.os.Bundle;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ArrayList<String> mySubjects = new ArrayList<>();
+    private ArrayList<Integer> myPictures = new ArrayList<Integer>();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        adjustNames();
+        adjustPictures();
+        adjustRecyclerView();
+
+    }
+
+
+    private void adjustNames()
+    {
+        mySubjects.add("Physics");
+        mySubjects.add("Biology");
+        mySubjects.add("History");
+        mySubjects.add("Geomtry");
+
+    }
+
+    private void adjustPictures()
+    {
+        myPictures.add(R.drawable.physics);
+        myPictures.add(R.drawable.physics);
+        myPictures.add(R.drawable.physics);
+        myPictures.add(R.drawable.physics);
+
+    }
+
+    private void adjustRecyclerView()
+    {
+        LinearLayoutManager lin = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        RecyclerView rec = findViewById(R.id.recyclerView);
+        rec.setLayoutManager(lin);
+        myAdapter adapter = new myAdapter(mySubjects,this);
+        rec.setAdapter(adapter);
+    }
+}
