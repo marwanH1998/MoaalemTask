@@ -19,6 +19,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
 
     private ArrayList<String> mySubjects = new ArrayList<>();
     private Context context;
+
     public myAdapter(ArrayList<String> subjects, Context hcontext)
     {
     mySubjects=subjects;
@@ -40,7 +41,7 @@ holder.name.setText(mySubjects.get(position));
 holder.image.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Toast.makeText(context, "clicked on image" + mySubjects.get(position), Toast.LENGTH_SHORT).show();
+        Toast.makeText(context , mySubjects.get(position), Toast.LENGTH_SHORT).show();
     }
 });
 

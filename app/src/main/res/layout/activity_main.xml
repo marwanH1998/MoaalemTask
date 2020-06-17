@@ -49,29 +49,42 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="632dp"
-        android:layout_height="156dp"
+        android:layout_width="616dp"
+        android:layout_height="159dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="133dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="130dp"
         android:orientation="horizontal" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="146dp"
+        android:layout_width="wrap_content"
+        android:layout_height="138dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="283dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="291dp"
         android:layout_marginEnd="-1dp"
         android:gravity="left"
-        android:text="Welcome Back! \n Continue Learning"
+        android:textStyle="bold"
+        android:text="Welcome Back! \nContinue Learning"
 
         android:textColor="#3aaf44"
         android:textSize="24sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="633dp"
+        android:layout_height="264dp"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="-207dp" />
 
 </RelativeLayout>
